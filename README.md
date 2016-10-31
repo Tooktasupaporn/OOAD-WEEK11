@@ -57,3 +57,64 @@ brewSizeSelected -d-> brewComplete
 brewComplete --> [*]
 
 @enduml
+
+activity diagram
+
+![](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuTBGqbJGrRLJKChCAqujAb58pi_CK-82YaH7vfSg92VcAIHdv1UdAgGKPUPbboUMf1R5AYWLP2Pd8uc0rIi0JU9oICrB0PeA0000)
+
+@startuml
+(*) --> "insert coin"
+-->[You can chose drinkwater] "pick drinkwater"
+--> (*)
+@enduml
+
+![](http://www.plantuml.com/plantuml/img/FOr12iCm30JlUiMYKrl85q8kVKN8mRHIOd2KOCl_hmAXfrrsM6PgdghtlT3ZzSGmZE2IzfE9ie8jhvipV1CZN7JsscK1Uw-6mvYaDBdGE6kA-aUgV3_Uzissugp7HrfR41wIs9IcY33_0000)
+
+@startuml
+(*) --> "lamp"
+
+if "night" then
+  -->[true] "turn on"
+else
+  ->[false] "turn off"
+  -->[Ending process] (*)
+endif
+@enduml
+
+![](http://www.plantuml.com/plantuml/img/NOvB2iCm34JtEeNGfX_85K8sFKN8mjXoQuZj82aDlNqLkkjgXk4nl4ajYErrXUlzXiCm8WMh150oqXPKZou9YsBi8XoDq5xS04zqDjbvGVATovknziOV0bwLJs2SS_3gGEhjOlY7_IuUBPNsn4rwPDK5tGBOjmoJXtjz0G00)
+
+@startuml
+(*) --> "atm"
+
+if "password is correct" then
+  -->[true] "receive money"
+else
+  ->[false] "don't receive money"
+  -->[Ending process] (*)
+endif
+@enduml
+
+![](http://www.plantuml.com/plantuml/img/JOvB2iCm34JtEiMWJJ-GAuHiUegGXKdaDjIrZEMqrwzCDrsD6DuJCraBjHslHEVh1SCmWZVLUZAOl2L3KWycsYEuI3ND-8JqH0dMm6WFoOGkpgqUie2rkEOr-XycIIOT6ESO_7HWJMhoH_piMzxsV4UfkehP0fz3ubsaoSC7VW40)
+@startuml
+(*) --> "door's seven eleven"
+
+if "person walk past " then
+  -->[true] "open the door"
+else
+  ->[false] "close the door"
+  -->[Ending process] (*)
+endif
+@enduml
+
+![](http://www.plantuml.com/plantuml/img/NOun3eCm34Ltd-BBIsabhe1OUWgK8GA7HgAXSapFNwTiJBRUV_hsM2sg7U-DkiSTVJ-0vwXCb1Fudo722HZsaa9epcHwI00lch-vhAV195kL9WnJYhw6LbLkXejsLZpBqjX7zrbg3V3p9CuIZJxyeHy0)
+
+@startuml
+(*) --> "car"
+
+if "start a car " then
+  -->[true] "driving a car"
+else
+  ->[false] "can't driving a car"
+  -->[Ending process] (*)
+endif
+@enduml
